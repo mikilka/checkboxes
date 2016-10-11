@@ -1,0 +1,77 @@
+.checkboxes,
+.jquery-checkboxes {
+    display: inline-block;
+    margin: 30px 0 50px 25px;
+    background: rgba(46, 230, 255, 1);
+    padding: 20px;
+    width: 200px;
+}
+
+.checkboxes li {
+    display: block;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans Unicode', Arial, sans-serif;
+    height: 16px;
+    margin-bottom: 9px;
+    font-size: 13px;
+    padding-bottom: 13px;
+    color: #12161a;
+}
+
+.checkboxes [type="checkbox"] {
+    display: none;
+}
+
+.checkboxes label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkboxes label::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 2px;
+    background-color: #fff;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,.75);
+    border: solid 1px #114165;
+    margin-right: 13px;
+}
+
+input[type="checkbox"]:checked + label::before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    color: #00f;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.niceCheck {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(../img/checkbox-sprite.png);
+    overflow: hidden;
+}
+
+.niceNotChecked {
+    background-position: 0 0;
+}
+
+.niceChecked {
+    background-position: 0 -17px;
+}
+
+.niceCheck input {
+    margin-left: -100px;
+}
+
+.niceCheckDisabled {
+    background-image: url(../img/checkbox-disabled.png);
+}
